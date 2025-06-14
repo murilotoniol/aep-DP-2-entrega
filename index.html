@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maringá Bike Share - Mobilidade Sustentável</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Maringá Bike Share</div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#map">Mapa</a></li>
+                <li><a href="#pricing">Preços</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Pedale para um futuro sustentável</h1>
+            <p>Descubra uma nova forma de se locomover em Maringá</p>
+            <button class="cta-button">Começar Agora</button>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>Sobre o Projeto</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Sustentabilidade</h3>
+                    <p>Redução da emissão de CO2 e congestionamentos</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Saúde</h3>
+                    <p>Promoção de um estilo de vida mais ativo</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Tecnologia</h3>
+                    <p>Sistema inteligente de compartilhamento</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="map" class="map-section">
+            <h2>Encontre uma Bicicleta</h2>
+            <div id="bike-map" class="map-container">
+                <!-- Mapa será inserido via JavaScript -->
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing-section">
+            <h2>Planos e Preços</h2>
+            <div class="pricing-cards">
+                <div class="price-card">
+                    <h3>Passe Diário</h3>
+                    <p class="price">R$ 12,00</p>
+                    <ul>
+                        <li>24 horas de uso</li>
+                        <li>Viagens ilimitadas</li>
+                        <li>Suporte 24/7</li>
+                    </ul>
+                    <button class="select-plan">Selecionar</button>
+                </div>
+                <div class="price-card featured">
+                    <h3>Passe Mensal</h3>
+                    <p class="price">R$ 49,90</p>
+                    <ul>
+                        <li>30 dias de uso</li>
+                        <li>Viagens ilimitadas</li>
+                        <li>Suporte prioritário</li>
+                        <li>Seguro incluso</li>
+                    </ul>
+                    <button class="select-plan">Selecionar</button>
+                </div>
+                <div class="price-card">
+                    <h3>Passe Anual</h3>
+                    <p class="price">R$ 399,90</p>
+                    <ul>
+                        <li>365 dias de uso</li>
+                        <li>Viagens ilimitadas</li>
+                        <li>Suporte VIP</li>
+                        <li>Seguro premium</li>
+                    </ul>
+                    <button class="select-plan">Selecionar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Entre em Contato</h2>
+            <form id="contact-form">
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="E-mail" required>
+                <textarea placeholder="Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Maringá Bike Share</h4>
+                <p>Transformando a mobilidade urbana</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#map">Mapa</a></li>
+                    <li><a href="#pricing">Preços</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>contato@maringabike.com.br</p>
+                <p>(44) 9999-9999</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Maringá Bike Share. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
