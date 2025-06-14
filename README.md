@@ -33,7 +33,7 @@ O Maringá Bike Share é uma solução inovadora de mobilidade urbana desenvolvi
 ## 🛠️ Instalação e Uso
 1. Clone o repositório:
 ```bash
-git clone [URL_DO_REPOSITÓRIO]
+git clone https://github.com/murilotoniol/aep-DP-2-entrega
 ```
 
 2. Navegue até o diretório do projeto:
