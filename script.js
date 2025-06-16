@@ -1,17 +1,13 @@
 // Inicialização do mapa usando Leaflet.js
 function initMap() {
-    // Coordenadas de Maringá
     const maringa = [-23.4273, -51.9375];
 
-    // Criar o mapa
     const map = L.map('bike-map').setView(maringa, 13);
 
-    // Adicionar camada do OpenStreetMap
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    // Exemplo de pontos de bicicletas (simulados)
     const bikePoints = [
         { lat: -23.4273, lng: -51.9375, bikes: 5 },
         { lat: -23.4200, lng: -51.9300, bikes: 3 },
@@ -19,7 +15,6 @@ function initMap() {
         { lat: -23.4150, lng: -51.9450, bikes: 4 }
     ];
 
-    // Adicionar marcadores para cada ponto
     bikePoints.forEach(point => {
         const marker = L.marker([point.lat, point.lng])
             .bindPopup(`Bicicletas disponíveis: ${point.bikes}`)
@@ -27,7 +22,6 @@ function initMap() {
     });
 }
 
-// Animação suave do scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -40,27 +34,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Formulário de contato
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Simulação de envio do formulário
         const formData = new FormData(this);
         const data = {};
         formData.forEach((value, key) => data[key] = value);
 
-        // Aqui seria a integração com um backend real
         console.log('Dados do formulário:', data);
         
-        // Feedback para o usuário
         alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
         this.reset();
     });
 }
 
-// Animação de elementos ao scroll
 function animateOnScroll() {
     const elements = document.querySelectorAll('.feature-card, .price-card');
     
@@ -74,7 +63,6 @@ function animateOnScroll() {
     });
 }
 
-// Sistema de aluguel de bicicletas
 class BikeRental {
     constructor() {
         this.rentedBikes = new Map();
@@ -89,7 +77,6 @@ class BikeRental {
     }
 
     startRental(button) {
-        // Simulação do processo de aluguel
         const plan = button.parentElement.querySelector('h3').textContent;
         
         if (!this.rentedBikes.has(plan)) {
@@ -97,7 +84,6 @@ class BikeRental {
             button.textContent = 'Ativo';
             button.style.backgroundColor = '#27ae60';
             
-            // Simulação de confirmação
             alert(`Plano ${plan} ativado com sucesso! Você já pode retirar sua bicicleta em qualquer estação.`);
         } else {
             alert('Você já possui um plano ativo!');
@@ -105,12 +91,9 @@ class BikeRental {
     }
 }
 
-// Inicialização quando o DOM estiver carregado
 document.addEventListener('DOMContentLoaded', () => {
-    // Carregar o mapa se o elemento existir
     const mapElement = document.getElementById('bike-map');
     if (mapElement) {
-        // Verificar se o Leaflet está carregado
         if (typeof L !== 'undefined') {
             initMap();
         } else {
@@ -118,15 +101,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Inicializar sistema de aluguel
     const bikeRental = new BikeRental();
 
-    // Adicionar listener para animações no scroll
     window.addEventListener('scroll', animateOnScroll);
-    animateOnScroll(); // Verificar elementos visíveis no carregamento inicial
+    animateOnScroll();
 });
 
-// Adicionar classe para navegação fixa
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     if (header) {
